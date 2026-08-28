@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Nunito', system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: 'Fredoka', 'Nunito', sans-serif;
+}
+
+body {
+  margin: 0;
+  overscroll-behavior: none;
+}
+
+@keyframes tile-pop {
+  0% { transform: scale(0); opacity: 0; }
+  60% { transform: scale(1.12); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes tile-bump {
+  0% { transform: scale(1); }
+  35% { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+
+.tile-pop {
+  animation: tile-pop 180ms ease-out;
+}
+
+.tile-bump {
+  animation: tile-bump 180ms ease-out;
+}
+
+@keyframes slide-down {
+  0% { transform: translate(-50%, -100%); opacity: 0; }
+  100% { transform: translate(-50%, 0); opacity: 1; }
+}
